@@ -16,6 +16,7 @@
      padding: 20px;
     background: black;
     border-radius: 20px;
+    margin:20px
     }
 </style>
   <script>
@@ -27,6 +28,7 @@
     let newList =[];
           data.forEach(element => {
             let newObj = {
+               id:element.id,
                name:element.name,
                username:element.username,
                email:element.email,
@@ -43,11 +45,11 @@
            <div class="card col-sm-6 col-xs-12 col-md-4" style="width: 18rem;">
             <img class="card-img-top" src="${element.website}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">${element.username}</h5>
-              <p>name:${element.name}</p>
-              <p>email:${element.email}</p>
-              <p>company:${element.company.name}</p>
-              <p>city:${element.address.city}</p>
+              <h5 class="card-title">${element.id}. ${element.username}</h5>
+              <p>name: <span>${element.name}</span></p>
+              <p>email: <span>${element.email}</span></p>
+              <p>company: <span>${element.company.name}</span></p>
+              <p>city: <span>${element.address.city}</span></p>
             </div>
           </div> 
            `
